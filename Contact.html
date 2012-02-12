@@ -1,0 +1,136 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<title>Lazy Glamour</title>
+<link href="style.css" rel="stylesheet" type="text/css" />
+
+
+
+
+
+</head>
+ 
+<body id="top">
+<div id="yfc_mini"></div>
+
+<!--CONTAINER-->
+<div id="container_b">
+<div id="inner">
+
+<div class="inn_logo"><a href="index.html"><img src="images/logo.png" /></a></div>
+
+<div class="menu"></div>
+
+
+<div class="inn_main">
+<span class="inn_main1">Contact Us</span>
+
+<span class="inn_main2"></span>
+
+<span class="inn_main3">
+
+<h3>We Want To Hear Your Thoughts</h3>
+
+<p>Need help with an order? Not sure about your sizing? Curious about our favorite Thai restaurant? Feel free to send us a note and we'll be happy to help answer your questions.</p>
+
+<div class="contactForm">
+<form type="post" id="emailForm" action="http://lazyglamour.com/templates/senma.php">
+<label for="FirstName">* First Name</label>
+<input name="FirstName" id="FirstName" type="text" size="12" maxlength="20" />
+
+<label for="LastName">* Last Name</label>
+<input name="LastName" id="LastName" type="text" size="12" maxlength="20" />
+
+<label for="Email">* Email</label>
+<input name="Email" id="Email" type="text" size="35" maxlength="100" />
+
+<label for="Comments">Comments</label>
+<textarea name="Comments" id="Comments" cols="35" rows="3"></textarea>
+
+<input name="MailingList" id="MailingList" type="checkbox" value="subscribe" /><label for="MailingList">Sign Up To Receive Emails From Lazy Glamour</label>
+
+<input type="submit" name="Submit" value="Submit" />
+</form>
+</div>
+
+</span>
+
+<span class="inn_main13">
+<ul class="navp">
+         
+     </ul>
+</span></div>
+
+
+<div class="inn_lb"></div>
+
+
+<div id="footer"></div>
+
+</div>
+</div>
+
+</body>
+<script src="http://yui.yahooapis.com/3.3.0/build/yui/yui-min.js" charset="utf-8"></script>
+<script>
+var pageConfig = {
+	top: {
+		shop:false,
+		ecofashion:false,
+		press:false,
+		about:true
+	},
+	left: {
+		home:false,
+		shop:false,
+		ecofashion:false,
+        showEcofashion:false,
+		ecofashion1:false,
+		ecofashion2:false,
+		ecofashion3:false,
+		press:false,
+		about:true
+	}
+}
+
+
+YUI().use('node', function(Y) {
+	var checkEmpty = function (node) {
+		return node.get('value') === '';
+	}
+
+	Y.one('#emailForm').on('submit', function (e) {
+		var firstName = Y.one('#FirstName');
+		var lastName = Y.one('#LastName');
+		var email = Y.one('#Email');
+		
+		var firstNameEmpty = checkEmpty(firstName);
+		var lastNameEmpty = checkEmpty(lastName);
+		var emailEmpty = checkEmpty(email);
+		
+		if (firstNameEmpty && lastNameEmpty && emailEmpty) {
+			alert('Please enter your name and email.');
+			e.preventDefault();
+			return false;
+		} else if (firstNameEmpty) {
+			alert('Please enter your first name.');
+			e.preventDefault();
+			return false;
+		} else if (lastNameEmpty) {
+			alert('Please enter your last name.');
+			e.preventDefault();
+			return false;
+		} else if (emailEmpty) {
+			alert('Please enter your email.');
+			e.preventDefault();
+			return false;
+		}
+		return true;
+	});
+});
+</script>
+<script src="scripts/handlebars-1.0.0.beta.2.js"></script>
+<script src="scripts/common.js"></script>
+<script type="text/javascript" id="yfc_loader" src="http://l.yimg.com/a/lib/smbiz/store/yfc/js/0.4/loader.js?q=yhst-130100458724450&ts=1306713766"></script>
+</html>

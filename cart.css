@@ -1,0 +1,863 @@
+/* 
+_____________________________________
+Small Business Merchant Solutions
+http://smallbusiness.yahoo.com/merchant
+$Date: 2009-10-12 12:37:52 $
+$Revision: 1.32 $
+*/
+
+/* from LG import style.css */
+.menu{
+position:absolute;
+z-index:4;  
+width:704px; 
+height:60px; 
+padding:0px; 
+margin:-62px 0 0 159px; 
+text-align:left; }
+
+.nav { list-style: none;}
+.nav li { float: left;}
+.nav li a { width:auto; height:auto; display: block; padding:0 18px 0 18px; font-family:"Times New Roman", Times, serif; font-size:29px; color:#FFFFFF; text-decoration:none; float:left}
+
+.nav li .nav { width:auto;}
+
+.nav li .nav:hover { width:auto; color:#f19faf}
+
+.nav li .nav_over { width:auto; color:#f19faf}
+
+.inn_logo{
+position:absolute; 
+z-index:4; 
+width:381px; 
+height:247px; 
+padding:0px; 
+margin:-140px 0 0 -215px; 
+text-align:left;}
+
+/* End LG import style.css */
+
+
+/* General Element Styles */
+body { background-image:url(http://lazyglamour.com/images/background_base.jpg);color:#000000;font-family:Helvetica, Arial,sans-serif;margin:-140px 0 auto;padding:0;font-size:12px;height:710px; }
+h1,h2,h3,h4,h5,h6 { margin:0;padding:0; }
+h1,h2 { font:18px/20px helvetica,georgia,times,serif; }
+h3,h4 {  }
+h5,h6 {  }
+blockquote { margin:0;padding:0; }
+blockquote p { padding:0;margin:0; }
+p { margin:0;padding:0; }
+td a, a { color:#0000ff;font-family:Helvetica, Arial; }
+td a:visited, a:visited  { color:#0000ff;font-family: Helvetica, Arial; }
+td a:hover, a:hover {  }
+dl dt, dl dd {  }
+ul {  }
+ul li {  }
+a img { border:0; }
+sup { line-height:2; }
+/* Major Sections indented as per hierarchy */
+.ys_wrapper { background:url("http://lazyglamour.com/images/background_i_main2.png") no-repeat center center;margin:250px auto 0; height:710px;}
+/* sidebar exception. */
+#ys_cartPage.ys_sideBar,
+#ys_shipBillPage.ys_sideBar,
+#ys_billingPage.ys_sideBar,
+#ys_shippingPage.ys_sideBar,
+#ys_reviewPage.ys_sideBar,
+#ys_confirmationPage.ys_sideBar { width:950px; }
+#ys_mastHead { height:100px; }
+	#ys_mastHead #ys_merchHeader { width:750px;margin:0 auto; }
+#ys_sideBar { float:left;min-width:150px;width:auto !important;width:150px; }
+/* #ys_pageBody { position:absolute; top: 180px; left:315px; margin:0 auto;padding:10px;width:750px; } */
+#ys_pageBody { width:750px; padding:10px; margin:0 auto; height:460px;overflow-y:auto; }
+/* pageBody with sideBar enabled */
+#ys_pageBody.ys_sideBar { margin:0;border-left:1px solid #ccc;overflow:hidden;width:auto; }
+*html #ys_pageBody.ys_sideBar { width:750px; }
+/* #ys_pageBody.ys_sideBar { margin:0;border-left:1px solid #ccc;overflow:hidden;width:auto; } */
+	#ys_pageBody #ys_merchLogo { text-align:center; }
+		#ys_merchLogo h2 { padding:10px;font-size:120%; }
+	#ys_pageBody #ys_ofbMessage {  }
+		#ys_ofbMessage h2 { padding:10px;font-size:120%; }
+		#ys_ofbMessage p { padding:0 10px 10px 10px;font-size:12px;font-family:"courier new",courier,monospace; }
+	#ys_pageBody #ys_progress {  }
+	#ys_pageBody #ys_userMessages { margin:0 auto;background:#fffecd;padding:10px;border:1px solid #e9e69f; }
+		#ys_userMessages h4 { font:14px/14px georgia,times,serif;margin:0;padding:10px 0; }
+		#ys_userMessages ul { padding:0 10px;font:12px/12px "courier new",courier,monospace;margin:0; }
+			#ys_userMessages ul li { padding:0;margin:0 0 5px 10px; }
+		#ys_userMessages ul#ys_errorMessages { color:#f00; }
+		#ys_userMessages ul#ys_warningMessages { color:#000; }
+		#ys_userMessages ul#ys_infoMessages { color:#000; }
+	#ys_pageBody #ys_pageMessage { margin:10px 0;font:12px/14px arial,verdana,sans-serif; }
+		#ys_pageMessage p {  }
+	#ys_pageBody #ys_merchInfo { margin:10px 0;font:12px/14px arial,verdana,sans-serif; }
+	#ys_pageBody p#ys_giftCertMessage { margin:10px 0;font-size:12px;line-height:14px;padding-left:20px;background:url(https://sep.yimg.com/ca/Img/gift_small.gif) 0 50% no-repeat; }
+		#ys_giftCertMessage em { font-style:normal;font-weight:bold; }
+	#ys_pageBody #ys_cart { margin:10px auto; }
+		#ys_cart a img { border:0; }
+		#ys_cart table.ys_basket { border:1px solid #ffe763;width:100%; }
+			table.ys_basket { border-collapse:collapse;font:11px/11px Arial,arial,verdana,sans-serif;width:300px; }
+			table.ys_basket th,table.ys_basket td { empty-cells:show;padding:5px;border:1px solid #ffb7cf;vertical-align:top;white-space:normal; }
+			table.ys_basket thead th { padding:3px 6px;background:#ffb7cf;color:#000000;font:bold 11px Verdana,arial,verdana,sans-serief; }
+			table.ys_basket thead tr.ys_head th {font-family:Verdana,arial,verdana,sans-serief;color:#000000;background:#f677a2;border-width:0;margin:0;padding:3px 6px; }
+				.ys_sideCart table.ys_basket thead th { text-align:left; }
+				.ys_sideCart table.ys_basket thead th.ys_last { text-align:right; }
+			table.ys_basket .ys_first { border-left-width:0; }
+			table.ys_basket .ys_last { border-right-width:0;white-space:nowrap; }
+			table.ys_basket tr.ys_lastRow td { border-bottom-width:0; }
+			/* stripe your rows if you want */
+			table.ys_basket tr.ys_oddRow {  }
+			table.ys_basket tr.ys_evenRow {  }
+			table.ys_basket tbody td input.text { text-align:center;width:30px; }
+			table.ys_basket tbody td img { float:left;margin-right:10px; }
+			table.ys_basket tbody td strong { font-weight:bold; }
+			table.ys_basket tbody td span.ys_itemInfo strong {  }
+			table.ys_basket tbody td span.ys_itemInfo em { font-style:normal;display:block;margin-top:5px; }
+			table.ys_basket tbody td ul.ys_itemOptions { margin:0;padding:0; }
+				ul.ys_itemOptions li { margin:0;padding:0;line-height:12px;list-style:none; }
+				table.ys_basket .ys_items { text-align:left; }
+				table.ys_basket .ys_options { text-align:left; }
+				table.ys_basket .ys_unitPrice { text-align:center; }
+				table.ys_basket .ys_quantity { text-align:center; }
+				table.ys_basket .ys_inStock { text-align:center; }
+				table.ys_basket .ys_cost { text-align:right; }
+				table.ys_basket span.ys_giftCertIcon { background:url(https://sep.yimg.com/ca/Img/gift_small.gif) 0 2px no-repeat;height:17px;display:block;float:left;width:18px;overflow:hidden; }
+				table.ys_basket tr.ys_cartEmpty td { text-align:center;font-weight:bold;padding:10px;color:#f00; }
+			table.ys_basket tbody td ul#ys_itemOptions { margin:0;padding:0; }
+			table.ys_basket tbody tr.ys_updateQty { background:#ffb7cf; }
+				ul#ys_itemOptions li { margin:0;padding:0;line-height:12px;list-style:none; }
+			table.ys_basket tr.ys_orderLine td { font-weight:bold; }
+				table.ys_basket tr.ys_orderLine td.ys_first { text-align:right; }
+			table.ys_basket tr.ys_orderLine td img { float:none;display:inline; }
+			table.ys_basket tr.ys_orderLine td.ys_last { font-weight:normal; }
+			/* Basket inside - RSS & TNT */
+		.ys_majorSection .ys_subSection table.ys_basket { width:275px !important;margin-top:8px;border-collapse:collapse;border:1px solid #ffb7cf !important; }
+			.ys_subSection table.ys_basket tbody td,
+			.ys_subSection table.ys_basket thead th { padding:3px 2px !important;border:0;border-bottom:1px solid #ccc; }
+			/* Occuring on ShipBill & OnePage */
+			#ys_shipBillPage .ys_subSection table.ys_basket, #ys_onePage .ys_subSection table.ys_basket { font-size:9px; }
+			#ys_shipBillPage .ys_subSection table.ys_basket td,
+			#ys_onePage .ys_subSection table.ys_basket td { padding:3px; }
+		/* page actions w/ 2 buttons */
+		div.ys_pageActions { margin:20px 0;font:12px/13px verdana,arial,sans-serif;height:1%; }
+			div.ys_pageActions ul { list-style:none;margin:0;padding:0; }
+			div.ys_pageActions ul li { margin:0;padding:0; }
+			div.ys_pageActions ul li.ys_first { text-align:left;float:left; }
+			div.ys_pageActions ul li.ys_second { text-align:right; min-height:30px; _height:30px; }
+                        div.ys_pageActions ul li.ys_third { float:left; clear:both; margin:10px 0 -10px; }
+	#ys_pageBody.ys_sideCart #ys_cartInfo { float:right;width:150px; }
+		#ys_pageBody.ys_sideCart #ys_webLoyalty, #ys_pageBody.ys_sideCart #ys_calculatorReview,
+		#ys_reviewPage #ys_pageBody.ys_sideCart #ys_calculatorReview { float:none; }
+		#ys_pageBody #ys_webLoyalty, #ys_pageBody #ys_calculatorReview { width:150px;border:1px solid #ffe763; }
+		#ys_reviewPage #ys_pageBody #ys_calculatorReview { float:right; }
+		.ys_majorSection .ys_subSection #ys_pageBody #ys_webLoyalty, #ys_pageBody .ys_majorSection .ys_subSection #ys_calculatorReview {width: 275px; border-width: 0 0 0 0;}
+		#ys_pageBody #ys_calculatorReview table.ys_basket { width:150px;border:1px solid #ffe763 !important; }
+			#ys_pageBody #ys_calculatorReview table.ys_basket td,
+			#ys_pageBody #ys_calculatorReview table.ys_basket th { font-size:10px;font-weight:normal;padding:0;border-left-width:0;border-right-width:0; }
+	#ys_pageBody.ys_topWebLoyalty #ys_buyerInfo,
+	#ys_pageBody #ys_buyerInfo.ys_calculatorReview { margin-right:160px; }
+	#ys_pageBody .ys_discount { clear:left;margin:0 auto 10px auto;background:#fffecd;padding:5px 10px 10px 10px;border:1px solid #e9e69f; }
+		/* calculatorReview on CartPage */
+		#ys_cartPage #ys_calculatorReview { float:none; }
+		#ys_cartPage #ys_calculatorReview table.ys_basket { width:300px; }
+		#ys_cartPage #ys_calculatorReview table.ys_basket td { padding:2px;font-size:11px; }
+		#ys_cartPage #ys_calculatorReview table.ys_basket th { padding:3px;font-size:11px;font-weight:bold; }
+		/* ---------------------------- */
+		.ys_discount strong { display:block;font:bold 12px/14px arial,verdana,sans-serif;margin:0;padding:10px 0; }
+		.ys_discount ul { padding:0 10px;font:12px/12px "courier new",courier,monospace;margin:0; }
+			.ys_discount ul li { padding:0;margin:0 0 5px 10px; }
+	#ys_pageBody #ys_relatedItems { margin:10px 0;clear:left; }
+		#ys_relatedItems h3 { font:bold 14px/16px arial,verdana,sans-serif; }
+		#ys_relatedItems dl { font-family:arial,verdana,sans-serif;font-size:12px; }
+		#ys_relatedItems dl dt { clear:left;float:left;padding-right:10px;display:block; }
+			#ys_relatedItems dl dt img { border:0;float:left;padding-right:10px;display:block; }
+		#ys_relatedItems dl dd { margin:10px 0;padding:0 0 10px 0; }
+		#ys_relatedItems dl dd .ys_relatedItemDesc { float:left; }
+		#ys_relatedItems dl dd.ys_hr { clear:left;border-bottom:1px solid #eee; }
+		#ys_relatedItems dl dd.ys_hr hr { display:none; }
+			#ys_relatedItems dl dd em { font-style:normal;display:block; }
+			#ys_relatedItems dl dd span { color:#f00;font-size:10px; }
+			#ys_relatedItems dl dd em.ys_promo { color:#f00;font-size:10px; }
+			#ys_relatedItems dl dd strong { float:right;text-align:right;display:block; }
+		#ys_relatedItems table { width:100%; }
+		#ys_relatedItems .ystore-cross-sell-cell { padding: 10px 0; border-bottom: 1px solid #eee; }
+		#ys_relatedItems .ystore-cross-sell-product-image-link { display:block; float:left; margin-right:8px; }
+		#ys_relatedItems div.ystore-cross-sell-order-button-container { float:right; }
+		#ys_relatedItems div.ystore-cross-sell-product-caption { float:left; }
+		#ys_relatedItems p.ys_promo { color:#f00;font-size:12px; }
+	/* Side Cart (Conditional) Rules */
+	#ys_pageBody.ys_sideCart #ys_cart { width:150px;margin:0 0 10px 0; }
+	/* body[id="yahoo-store-checkout"] #ys_pageBody.ys_sideCart #ys_cart { margin-right:10px; } */
+	#ys_pageBody.ys_sideCart #ys_cart table.ys_basket td,
+	#ys_pageBody.ys_sideCart #ys_cart table.ys_basket th { font-size:10px;line-height:10px;border-right-width:0;border-left-width:0; }
+	#ys_pageBody.ys_sideCart #ys_cart table.ys_basket th { font-weight:bold; }
+	#ys_pageBody.ys_sideCart { width:750px; }
+	#ys_pageBody.ys_sideCart #ys_buyerInfo, #ys_pageBody.ys_sideCart .ys_pageActions,
+	#ys_pageBody.ys_rss .ys_pageActions,
+	#ys_pageBody.ys_sideCart #ys_orderReview, #ys_pageBody.ys_sideCart #ys_orderConfirmation,
+	#ys_pageBody.ys_sideCart #ys_upsAddrValidation { margin-right:160px; }
+	/* ---------------- */
+	
+	#ys_pageBody #ys_buyerInfo { border:1px solid #f677A2;clear:left; }
+		/* 3 pixel text jog */
+		* html #ys_pageBody #ys_buyerInfo { height:1%; }
+		/* ---------------- */
+			#ys_pageBody #ys_buyerInfo.ys_noShipping #ys_shipBillBillingInfo,
+			#ys_pageBody #ys_buyerInfo.ys_noBilling #ys_shipBillShippingInfo { margin-left:0;width:100%;border-left-width:0;border-right-width:0; }
+			
+		#ys_buyerInfo #ys_shipBillShippingInfo {  }
+			#ys_onePage #ys_shipBillShippingInfo, #ys_shipBillPage #ys_shipBillShippingInfo { float:left;border-bottom-width:0;border-right:1px solid #ccc; }
+			#ys_onePage #ys_shipBillBillingInfo, #ys_shipBillPage #ys_shipBillBillingInfo { border-bottom-width:0;border-left:1px solid #ccc; }
+			#ys_onePage #ys_shipBillShippingInfo { width:350px; }
+			#ys_onePage #ys_shipBillBillingInfo { margin-left:350px; }
+			#ys_shipBillPage #ys_shipBillShippingInfo { width:295px; }
+			#ys_shipBillPage #ys_shipBillBillingInfo { margin-left:295px; }
+			#ys_onePage #ys_shipBillOtherInfo, #ys_shipBillPage #ys_shipBillOtherInfo, 
+			#ys_onePage #ys_giftCertInfo, #ys_shipBillPage #ys_giftCertInfo { clear:left; }
+/* #ys_mastFoot { clear:both; position:absolute; top: 500px; left:475px; } */
+    #ys_mastFoot { position:relative; }
+	#ys_mastFoot #ys_merchFooter {  }
+		#ys_merchFooter p { font:12px/12px verdana,arial,sans-serif; }
+	#ys_mastFoot #ys_yFooter { text-align:center;padding:10px 100px;margin:0; }
+		#ys_yFooter * { font-weight:normal;font-style:normal; }
+		#ys_yFooter p { margin:0;padding:0;font:10px/11px verdana,arial,sans-serif; }
+			#ys_yFooter p em { display:block; }
+			#ys_yFooter p#ys_copyright { margin-top:10px; }
+	
+/* Modules & Global Page Elements */
+	/* Progress Indicator */
+	#ys_progress { text-align:center;margin:0 auto 10px auto;cursor:default;overflow:hidden;display:table; }
+		#ys_progress span.ys_progressVisited { display: table-cell !important;display: inline-block;width: 110px;line-height:20px;background:url(https://s.yimg.com/lq/i/us/str/el/reverse_arrow_3.gif) 100% -1px no-repeat;background-color:#AAAAAA;color:#000000;font-family:Arial,verdana,sans-serif; }
+		#ys_progress span.ys_progressCurrent { display: table-cell !important;display: inline-block;width: 110px;line-height:20px;background:url(https://s.yimg.com/lq/i/us/str/el/reverse_arrow_3.gif) 100% -1px no-repeat;font-weight: bold;background-color:#ffb7cf;color:#000000;font-family:Arial,verdana,sans-serif;}
+		#ys_progress span.ys_progressFuture { display: table-cell !important;display: inline-block;width: 110px;line-height:20px;background:url(https://s.yimg.com/lq/i/us/str/el/reverse_arrow_3.gif) 100% -1px no-repeat;background-color:#CCCCCC;color:#000000;font-family:Arial,verdana,sans-serif;}
+		#ys_progress span span.ys_progressLabel { padding: 0 12px 0 15px; white-space: nowrap; height:20px; display: block; background:url(https://s.yimg.com/lq/i/us/str/el/reverse_arrow_end_3.gif) 0 -2px no-repeat; }
+
+	/* Sections */
+	.ys_majorSection { font-family:arial,verdana,sans-serif;font-size:12px;width:100%; }
+	/* no borders on major sections for onePage flow */
+	#ys_onePage .ys_majorSection, #ys_shipBillPage .ys_majorSection { border-width:0;width:auto; }
+	/* --------------------------------------------- */
+		.ys_majorSection h3 { background:#f677A2;color:#000000;font-family:Verdana,verdana,sans-serif;margin:0;padding:3px 6px;font-size:11px; }
+		.ys_majorSection h4 { border-bottom:1px solid #eee;background:#eee;color:#000000;font-family:Verdana,arial,verdana,sans-serif;padding:3px 6px;font-size:11px; }
+		.ys_majorSection h5 { margin:0 0 10px 0; }
+			.ys_majorSection h4 span { display:block; }
+			.ys_majorSection h4 span.ys_first { float:left;text-align:left; }
+			.ys_majorSection h4 span.ys_edit { float:right;text-align:right; }
+		.ys_majorSection .ys_subSection { padding:6px;overflow:hidden;zoom:1; }
+		.ys_majorSection fieldset { font:11px/12px arial,verdana,sans-serif;border:0;padding:6px; }
+		.ys_majorSection fieldset.ys_merchFields { }
+		.ys_majorSection label { color:#000000;font-family:Arial,sans-serif;display:block;padding-bottom:10px !important;padding-bottom:8px; }
+			.ys_subSection .ys_subSection { padding:0; }
+			.ys_subSection fieldset { font:11px/12px arial,verdana,sans-serif;border:0;margin:0;padding:0; }
+			.ys_subSection fieldset label.r1 { display:inline;margin-bottom:0; }
+			.ys_subSection fieldset label input.checkbox { display:inline;padding-right:10px;margin-bottom:1px; }
+				/* Customizations per subSection */
+			#ys_billingAddress { overflow:hidden;  }
+			#ys_shippingOptions fieldset label { padding-bottom:0 !important;padding-top:1em; }
+			#ys_shippingOptions fieldset label#labelmerchant-selected-shipping-methods { padding-top:0; }
+			#ys_downloadMessage { clear:left; }
+			#ys_payment fieldset label strong { margin:0;padding:1px 0; }
+				/* Customizations per element */
+				#ys_billTo ul, #ys_billTo ul li { list-style:none;margin:0;padding:0; }
+				.ys_subSection fieldset ul#ys_billToAddress { float:left; }
+					p#ys_billToEmail { clear:left; }
+				.ys_subSection fieldset div#ys_billingInputs {height: 1%;}
+				.ys_subSection fieldset label#labelshipping-city,
+				.ys_subSection fieldset label#labelbilling-city,
+				.ys_subSection fieldset label#labelshipping-state-for-shipping-calculator,
+				.ys_subSection fieldset label#labelShipMethod { float:left;padding-right:10px; }
+			#ys_cartPage #labelShipMethod { padding-top:12px; }
+				.ys_subSection fieldset label#labelshipping-zip,
+				.ys_subSection fieldset label#labelbilling-zip,
+				.ys_subSection fieldset label#labelmerchant-selected-shipping-methods { clear:left;float:left;padding-right:10px; }
+				.ys_subSection fieldset label#labelshipping-country,
+				.ys_subSection fieldset label#labelbilling-country { clear:left; }
+				label#labelcard-type { float:left;padding-right:10px; }
+				label#labelcard-type strong { display:block; }
+				label.ys_radioGroup { float:none !important; }
+				label strong.ys_radioLabel { display:block;float:none; }
+				label#labelcard-number {   }
+				label#labelcard-exp-month { clear:left;float:left;padding-right:10px; }
+				#ys_onePage #ys_paymentMethod select,
+				#ys_shipBillPage #ys_paymentMethod select,
+				#ys_shipBillPage #labelshipping-state select,
+				#ys_onePage #labelshipping-state select,
+				#ys_shipBillPage #labelbilling-state select,
+				#ys_onePage #labelbilling-state select { width:100px; }
+				/* firefox 1.5 issue with option widths */
+				* > ys_onePage #ys_paymentMethod option,
+				* > #ys_shipBillPage #ys_paymentMethod option { width:100px; }
+				label#labelcard-exp-year { float:left; } 
+		#ys_cartPage label#labelshipping-country { clear:none; }
+					fieldset#ys_couponFieldset { position:relative; }
+						#ys_couponFieldset .ys_secondary {  }
+					fieldset#ys_couponFieldset input#gc-redemption-code{ float:left;margin-right:10px; }
+					label#labelgift-wrap-checkbox strong,
+					label#labelgmk-enabled strong,
+					label#labelratings strong,
+					label#payUsingCreditCard strong,
+					label#payUsingPaypal strong,
+					label#notSameAsShipping strong,
+					label#sameAsShipping strong,
+					label#labelgift-wrap-checkbox input,
+					label#labelgmk-enabled input,
+					label#labelratings input,
+					label#payUsingCreditCard input,
+					label#payUsingPaypal input,
+					label#notSameAsShipping input,
+					label#sameAsShipping input { display:inline;font-weight:normal; }
+					label#labelccSelectedRadio strong,
+					label#labeluseShippingRadio strong,
+					label#labeluseBillingRadio strong,
+					label#labelppSelectedRadio strong {display:inline;font-weight:bold; }
+					div#billCreditCard { height:auto; zoom:1; overflow:hidden;}
+					.ys_subSection fieldset label.radio input,
+					.ys_subSection fieldset label.radio em,
+					.ys_majorSection label.checkbox strong,
+					.ys_majorSection label.ys_plainText em,
+					.ys_majorSection label.ys_plainText strong { display:inline; }
+		.ys_majorSection label strong { display:block;font-weight:normal; }
+			.ys_subSection fieldset label input {  }
+			/* #ys_shipBillPage commented out since ys_shipBillShipping info is only on two configs */
+			#ys_shipBillShippingInfo .ys_subSection fieldset label select,
+			#ys_shipBillBillingInfo .ys_subSection fieldset label select { width:200px; } 
+		.ys_majorSection label em, 
+		.ys_majorSection em { display:block; }
+		* html #ys_shipBillShippingInfo #shipping-state {position:absolute;}
+		*:first-child+html #ys_shipBillShippingInfo #shipping-state {position:absolute;}
+		
+		* html #ys_shipBillBillingInfo #billing-state {position:absolute;}
+     		*:first-child+html #ys_shipBillBillingInfo #billing-state {position:absolute;}
+	/* Cvn Module */
+	label#labelcard-cvv { clear: both; }
+		label#labelcard-cvv input.text { width:50px !important; }
+	span#ys_cvnImage { display: block; padding:0; margin-left: 85px; margin-top: -32px; }
+	span#ys_cvnAmexImage { display: block; padding:0; margin-left: 85px; margin-top: -32px; }
+	input#cvn { width:45px; }
+	span#cvn_enabled {  }
+	
+	/* Buttons & Form Elements */
+	input.ys_primary,button.ys_primary { background:#66A5FF;color:#FFF;font:bold 11px Arial,verdana,sans-serif;padding:1px 5px;text-align:center;cursor:pointer; }
+	input.ys_secondary,button.ys_secondary { background:#E0E1E5;color:#000;font:bold 10px Verdana,verdana,sans-serif;padding:1px 3px;text-align:center;cursor:pointer; }
+	input.ys_stdBtn,button.ys_stdBtn {font:bold 10px verdana,arial,sans-serif;padding:1px 0;text-align:center;cursor:pointer; }
+		/* IE6 border differences */
+		* html input.ys_primary, * html button.ys_primary,
+		* html input.ys_secondary, * html button.ys_secondary { padding:0;border:2px outset #e0e1e5; }
+		/* ---------------------- */
+		/* feau input disguised as a link */
+		input.ys_submitLinkBtn { display:inline;background:transparent;color:blue;font:11px/11px arial,verdana,sans-serif;padding:0;margin:0;border:0;cursor:pointer; }
+	input.radio,input.checkbox,label#labelconfirm-email strong { display:inline; }
+	input.radio { position:relative;top:2px; }
+	textarea,input.text,select { font:12px helvetica,arial,"courier new",courier,monospace;padding:0;margin:1px 0; }
+	textarea#comments,textarea#giftcert_msg { width:300px;height:75px; }
+	#ys_onePage #ys_shipBillShippingInfo textarea, #ys_onePage #ys_shipBillBillingInfo textarea, 
+	#ys_shipBillPage #ys_shipBillShippingInfo textarea, #ys_shipBillPage #ys_shipBillBillingInfo textarea { width:250px; }
+	
+/* Y! modules */
+	/* informational messaging */
+	div.ys_infoWrap { background:#fff;border:1px solid #ccc;margin:10px auto;padding:2px;-moz-border-radius:3px; }
+	div.ys_info { background:#eee;margin:0;padding:0 0 1px 0;-moz-border-radius:3px; }
+	div.ys_info * { margin:0; }
+	.ys_disclaimer { font:10px/10px verdana,arial,sans-serif;margin:5px 0;padding:0; }
+	p#ys_upsDisclaimer { clear:left;margin-bottom:8px;font-size:10px;font-family:Arial,arial,verdana,sans-serif; }
+        p#ys_upsratenote { clear:left;margin-bottom:8px;font-size:10px;font-family:Arial,arial,verdana,sans-serif; }
+	p#ys_upsLogo { clear:left;padding:5px 0; }
+	span.ys_errorMark { color:#f00;font-size:14px; }
+	/* Paypal Sections */
+		/* Paypal Globals (with Ids) */
+		#ys_paypalSection { font:11px/14px Arial,verdana,arial,sans-serif;color:#000;margin:10px 0;width:100%;clear:left;min-height:68px;height:auto !important;height:68px; }
+		#ys_paypalSection h5 { font:bold 11px/13px Arial,verdana,arial,sans-serif;color:#000;margin:0;padding:0; }
+		#ys_paypalSection p { margin:0;padding:0; }
+		#ys_paypalSection a img { border:0; }
+		#ys_paypalSection .fl { float:left; }
+		#ys_paypalSection .sep { padding-bottom:25px;margin-bottom:25px;border-bottom:1px solid #ccc; }
+		/* Paypal Globals (with classes) */
+		.ys_paypalSection { font:11px/14px Arial,verdana,arial,sans-serif;color:#000;padding:0 0 10px; margin-top:-8px; overflow:hidden; _float:right; }
+		.ys_paypalSection h5 { font:bold 11px/13px Arial,verdana,arial,sans-serif;color:#000;margin:0;padding:0; }
+		.ys_paypalSection p { margin:0;padding:0; }
+		.ys_paypalSection a img { border:0; }
+		.ys_paypalSection .fl { float:left; }
+		.ys_paypalSection .sep { padding-bottom:25px;margin-bottom:25px;border-bottom:1px solid #ccc; }
+		#ys_paymentMethod .ys_paypalSection,
+		#ys_review .ys_paypalSection,
+		#ys_confirmation .ys_paypalSection,
+		#ys_orderStatus .ys_paypalSection { margin-top:2px; _float:none; }
+		/* PayPal with SideCart */
+		#ys_pageBody.ys_sideCart #ys_paypalSection { margin-right:160px; }
+		/* PayPal billing */
+		#ys_paypalBilling { width:250px; }
+		#ys_paypalBilling h5 { margin-bottom:10px; }
+		#ys_paypalBilling p img { display:block; }
+		#ys_paypalBilling p#ys_paypalLogo { float:left; }
+		#ys_paypalBilling p#ys_paypalTerms { margin-left:70px; }
+		#ys_paypalBilling p#ys_paypalTerms img { margin-top:10px; }
+		div.ys_outside { color:#999;font:11px/13px Arial,verdana,sans-serif;width:400px; }
+			div#billPayPal { height:auto !important;height:1em; }
+		/* PayPal Billing Return */
+		#ys_paypalBillingReturn .ys_paySection { margin-left:25px; }
+		#ys_paypalBillingReturn h5 label { color:#000; }
+		/* PayPal Cart */
+		#ys_paypalShipBill #ys_paypalTermsSection { margin-right:120px; }
+		#ys_paypalShipBill #ys_paypalTermsSection p#ys_paypalLogo { float:left;margin-right:10px; } 
+		#ys_paypalShipBill #ys_paypalTermsSection p#ys_paypalTerms { float: none !important;float:left; } 
+		#ys_paypalShipBill #ys_paypalPayNow { float:right;margin:0 0 0 10px;padding:0; }
+			/* onePage and shipBill exceptions */
+			#ys_shipBillPage .ys_majorSection #ys_paypalShipBill #ys_paypalTermsSection,
+			#ys_onePage .ys_majorSection #ys_paypalShipBill #ys_paypalTermsSection { margin-right:0; }
+			#ys_shipBillPage .ys_majorSection #ys_paypalShipBill #ys_paypalTermsSection p#ys_paypalLogo,
+			#ys_onePage .ys_majorSection #ys_paypalShipBill #ys_paypalTermsSection p#ys_paypalLogo { float:none;margin-right:0; } 
+			#ys_shipBillPage .ys_majorSection #ys_paypalShipBill #ys_paypalPayNow,
+			#ys_onePage .ys_majorSection #ys_paypalShipBill #ys_paypalPayNow { float:none;margin:0;padding:0; }
+			/* ------------------------------- */
+		/* PayPal Confirm */
+		#ys_paypalConfirm h5, #ys_paypalConfirm h6 { margin:0;padding:0; }
+		#ys_paypalConfirm h6 { font:10px/12px Arial,verdana,arial,sans-serif; }
+		#ys_paypalConfirm h5 { font:12px/12px Arial,arial,verdana,sans-serif; }
+		/* PayPal Pay Methods Sole */
+		#ys_paypalPayMethodsSole p { margin:0;padding:0; }
+		#ys_paypalPayMethodsSole p#ys_paypalCcs { float:left;margin:-15px 15px 0 0; }
+		/* toggleSection Styles */
+		.full * { color:#000 }
+		.soft * { color:#ccc; }
+	
+	/* Review, Confirmation, & Order Status */
+	#ys_orderStatus p,#ys_orderStatus li { line-height:16px; }
+	#ys_billToEmail { font-size:12px; }
+	#ys_shipTo,#ys_billTo { overflow:hidden; }
+	#ys_shipTo ul { list-style:none;list-style:none;margin:0;padding:0;line-height:12px; }
+		ul#ys_shipToAddress,ul#ys_billToAddress { font-size:12px;float:left; }
+		ul#ys_shipToGift { margin:10px 0 10px 200px;font-size:12px;zoom:1; }
+	p#ys_shipMethod, ul#ys_ccInfo { margin-left:200px; }
+	p#ys_shipMethod strong { display:block;font-weight:normal;padding:1px 0; }
+	p#ys_shipMethod strong span { font-weight:bold; }
+	p#ys_shipMethod em { display:block; }
+	/* Shipping Status */
+		/* Review */
+		#ys_reviewPage .ys_majorSection h4 { height:1.2em; }
+		#ys_buyerInfo .ys_majorSection .ys_subSection td.ys_giftCert strong { display:inline;font-weight:bold; }
+	#orderInfo { font-family:Arial; }
+	#ys_orderInfo table { border-collapse:collapse;margin-bottom:20px; }
+	#ys_orderInfo table th, #ys_orderInfo table td { height:20px;font-size:12px;line-height:13px;padding:3px 6px; }
+	#ys_orderInfo table th { text-align:right;font-weight:bold;color:#000;vertical-align:top;width:100px; }
+	#ys_orderInfo table td { text-align:left;vertical-align:top;line-height:16px; }
+	#ys_orderInfo em { display:block;font-style:normal;font-weight:bold; }
+	#ys_orderInfo strong { display:block;font-weight:normal; }
+	#ys_orderInfo table td ul { list-style:none;margin:0;padding:0;vertical-align:top; }
+	#ys_orderInfo table td ul li { list-style:none;margin:0 0 10px 0;padding:0; }
+	#ys_orderInfo table td ul li label { display:block;margin:0;padding:0; }
+	#ys_orderInfo table td ul li label input { margin:2px 0; }
+	#ys_orderInfo li input.chk { float:left;display:block; }
+	#ys_orderInfo label#labelupsAgreement { float:left; }
+	#ys_orderInfo li input.btn { margin:3px 0;display:block; }
+	#ys_orderInfo ul li p { padding:0;margin:0 0 5px; }
+	#ys_orderInfo ul li p.trackingCheck { padding:0;margin:0 0 5px 25px;line-height:0; }
+	#ys_shipTo li, #ys_shipTo p, #ys_billTo li, #ys_billTo p {line-height:18px;font-size:12px; }
+
+
+/* Payment Method Section */
+div#ys_paymentMethod hr { clear:both; }
+/* Global Quick Reference Properties */
+.l { text-align:left; }
+.c { text-align:center; }
+.r { text-align:right; }
+.b { font-weight:bold; }
+.i { font-style:italic; }
+.in { display:inline; }
+.bl { display:block; }
+.access { text-decoration:underline; }
+.h  { display:none !important; }
+.cl { clear:left; }
+.cb { clear:both; }
+.dis { opacity:0.3;filter:alpha(opacity=30); }
+.dis * {cursor: default;}
+
+/* paypal pro related css */
+#ys_paypalOr { float:right; }
+#ys_paypalOrContainer { width:100%; height:36px; margin-top:0; margin-bottom:10px; }
+
+#ys_proceedContainer .ys_primary { width:143px; height:30px; font-size:105%; }
+
+#ys_paypalPayNow.ys_paypalCartPage { height:60px; }
+#ys_paypalPayNow.ys_paypalSoleBillShip {}
+#ys_paypalPayNow.ys_paypalSoleBillShip input { margin-top:20px; }
+
+/* Extra Imagery elements */
+#extDiv1 {  } #extDiv1 span {  }
+#extDiv2 {  } #extDiv2 span {  }
+#extDiv3 {  } #extDiv3 span {  }
+#extDiv4 {  } #extDiv4 span {  }
+#extDiv5 {  } #extDiv5 span {  }
+#extDiv6 {  } #extDiv6 span {  }
+
+.ys_majorSection .ys_subSection #ys_savedCarts table.ys_basket { width:100% !important; margin-top:0px; }
+.ys_majorSection .ys_subSection #ys_savedCarts table.ys_basket th { text-align:left; }
+.ys_majorSection #ys_customerCarts { padding:0; }
+
+.ys_plainText em { font-style:normal; }
+
+#ys_buyerInfo #ys_crProfileShipTo {  }
+#ys_crProfilePage #ys_crProfileShipTo { float:left;border-bottom-width:0;border-right:1px solid #ccc; }
+#ys_crProfilePage #ys_crProfileBillTo { border-bottom-width:0;border-left:1px solid #ccc; }
+#ys_crProfilePage #ys_crProfileShipTo { width:50%; }
+#ys_crProfilePage #ys_crProfileBillTo { margin-left:50%; }
+#ys_crProfileShipTo .ys_subSection fieldset label select,
+#ys_crProfileBillTo .ys_subSection fieldset label select { width:200px; }
+#ys_crProfilePage .ys_majorSection { border-width:0;width:auto; }
+#ys_crProfileShipTo h4,
+#ys_crProfileBillTo h4 { overflow:hidden; padding-bottom:0; *height:1%; }
+
+#ys_crProfilePage #labelcr-cart-name { padding-bottom: 0px !important; }
+#ys_crProfilePage .ys_subSection table.ys_basket tbody td.ys_actions { width:40%; text-align:left; }
+#ys_crProfilePage .ys_subSection table.ys_basket tbody td.ys_actions a { margin-right:90px; }
+#ys_crProfilePage div.ys_pageActions ul li.ys_third { margin-top:40px; }
+#ys_crProfilePage #ys_customerViewProfile { clear:both; }
+#ys_crProfilePage #ys_buyerInfo { overflow:hidden; }
+
+#ys_buyerInfo #ys_crEditProfileShip {  }
+#ys_crEditProfilePage #ys_crEditProfileShip { float:left;border-bottom-width:0;border-right:1px solid #ccc; }
+#ys_crEditProfilePage #ys_crEditProfileBill { border-bottom-width:0;border-left:1px solid #ccc; }
+#ys_crEditProfilePage #ys_crEditProfileShip { width:50%; }
+#ys_crEditProfilePage #ys_crEditProfileBill { margin-left:50%; }
+#ys_crEditProfileShip .ys_subSection fieldset label select,
+#ys_crEditProfileBill .ys_subSection fieldset label select { width:200px; }
+#ys_crEditProfilePage .ys_majorSection { border-width:0;width:auto; }
+#ys_crEditProfilePage div.ys_pageActions { margin: 20px auto; width: 750px; }
+
+#ys_crEditProfilePage #ys_pageBody #ys_buyerInfo:after { content:"."; display:block; height:0; clear:both; visibility:hidden; }
+#ys_crEditProfilePage #ys_pageBody #ys_buyerInfo { *height:1%; }
+#ys_crEditProfilePage #ys_billingEmail { clear:left; }
+
+#ys_buyerInfo #ys_crLoginWrap {  }
+#ys_regLoginPage #ys_crLoginWrap { float:left;border-bottom-width:0;border-right:1px solid #ccc; }
+#ys_regLoginPage #ys_crRegWrap { border-bottom-width:0;border-left:1px solid #ccc; }
+#ys_regLoginPage #ys_crLoginWrap { width:50%; }
+#ys_regLoginPage #ys_crRegWrap { margin-left:50%; }
+#ys_crLoginWrap .ys_subSection fieldset label select,
+#ys_crRegWrap .ys_subSection fieldset label select { width:200px; }
+#ys_regLoginPage .ys_majorSection { border-width:0;width:auto; }
+#ys_regLoginPage #ys_pageBody #ys_buyerInfo.ys_noReg #ys_crLoginWrap { margin-left:0;width:100%;border-left-width:0;border-right-width:0; float:none; }
+div.ys_custreg_cart_button { position:relative; float:left; height:auto; margin-top:10px; }
+
+#yscp_iframe_bd                         {padding:0px 10px 0px 10px;}
+.yscp_ifr_hd                            {background:#ececec; height:30px;}
+.yscp_ifr_title                         {font-weight:bold; float:left; margin:7px 0px 0px 7px;}
+.yscp_container_close                   {cursor:pointer; position:absolute; top:2px; width:55px; text-decoration:none; margin-left:610px; }
+#yscp_glossDialog                       {background:none repeat scroll 0 0 transparent; border:0 none; position:absolute; text-align:left; visibility:hidden; width:233px; z-index:100;}
+#yscp_glossDialog .hd                   {border:0 none; background:url("https://s.yimg.com/lq/lib/smbiz/store/checkout/i/crn_sd_gloss_top_cpers1.gif") no-repeat scroll left top transparent; color:#204AC2; font:bold 12px/14px arial,verdana,sans-serif; padding:7px 12px 10px 7px;}
+#yscp_glossDialog .bd                   {padding:0 12px 12px;  background:url("https://s.yimg.com/lq/lib/smbiz/store/checkout/i/crn_sd_gloss_bot_cpers1.gif") no-repeat scroll left bottom transparent;}
+#yscp_glossDialog_c                     {visibility:visible;  z-index:1000; }
+#yscp_glossDialog .container-close      {background-image:url("https://s.yimg.com/lq/i/us/str/bn/bn_close_ofb_1.gif");  margin:2px 4px 0 0; padding:2px;}
+#yscp_glossDialog a.container-close:focus        {outline: none; }
+div.yscp_main_blk                       {width:656px; height:170px; border-bottom:1px solid #d7d7d7;}
+div.yscp_top_blk                        {padding:7px 5px 0 ; font-weight:bold;}
+div.yscp_top_blk_sg                     {padding:10px 5px 10px 5px; font-weight:bold;}
+div.yscp_btm_blk_sg                     {clear:both; margin:10px 0px;}
+div#yscp_help_blk                       {position: absolute; left: 16px; top:24px; z-index:10;}
+div.yscp_widget                         {height:170px; margin:0 auto; padding:0; width:390px; float:left; border-right:1px solid #d7d7d7;}
+div.yscp_divider                        {background:url("https://s.yimg.com/lq/lib/smbiz/shared/images/divider.jpg") no-repeat scroll 0 0; position:absolute; width:50px; height:50px; margin:70px 0px 0px 375px; z-index:0;}
+/* IE hack to adjust OR button */
+*html div.yscp_divider                  {margin-left:-17px;}
+*:first-child+html div.yscp_divider     {margin-left:-17px;}
+
+div.yscp_right_blk                      {display:block; width:250px; float:right; height:160px; text-align:center; vertical-align:middle;}
+div.yscp_btn_blk                        {margin-top:75px;}
+div.yscp_btm_blk                        {clear:both; margin:5px 0px;}
+
+ul.yscp_providers                       {float:left; list-style-type:none; margin:0 5px 5px; padding:0; width:150px;}
+ul.yscp_providers li                    {height:50px; margin:10px 0 8px; padding:0; width:150px;}
+ul.yscp_providers li a                  {display:block; width:150px; height:50px;}
+ul.yscp_providers li a                  {background:url("https://s.yimg.com/lq/lib/smbiz/shared/images/provider-sprite.gif") no-repeat scroll 0 0 transparent;}
+ul.yscp_providers li a:hover            {background:url("https://s.yimg.com/lq/lib/smbiz/shared/images/provider-sprite.gif") no-repeat scroll 0 0 transparent;}
+ul.yscp_col2 li                         {margin-left:13px;}
+li#yscp_yahoo a                         {background-position:0 0;}
+li#yscp_yahoo a:hover                   {background-position:-150px 0;}
+li#yscp_google a                        {background-position:0 -50px;}
+li#yscp_google a:hover                  {background-position:-150px -50px;}
+li#yscp_aol a                           {background-position:0 -100px;}
+li#yscp_aol a:hover                     {background-position:-150px -100px;}
+div.yscp_no_border                      {border:0px}
+
+.yscp_top-left-corner                   { height:5px; left:-1px; overflow:hidden;  top:-1px; width:5px; position:absolute;}
+.yscp_top-right-corner                  {height:5px; overflow:hidden;  right:-1px; top:-1px; width:5px; position:absolute;}
+.yscp_bottom-left-corner                {bottom:-1px; height:5px; left:-1px; overflow:hidden; width:5px; position:absolute; z-index:999;}
+.yscp_bottom-right-corner               {bottom:-1px; height:5px; overflow:hidden; position:absolute; right:-1px; width:5px; position:absolute; z-index:999;}
+
+.yscp_top-left-corner                   {background:transparent url(https://s.yimg.com/lq/lib/smbiz/store/common/storedatatable/storedatatable-sprite-1.0.1.gif) no-repeat scroll 0 0;}
+.yscp_top-right-corner                  {background:transparent url(https://s.yimg.com/lq/lib/smbiz/store/common/storedatatable/storedatatable-sprite-1.0.1.gif) no-repeat scroll -5px 0;}
+.yscp_bottom-left-corner                {background:transparent url(https://s.yimg.com/lq/lib/smbiz/store/common/storedatatable/storedatatable-sprite-1.0.1.gif) no-repeat scroll 0 -5px;}
+.yscp_bottom-right-corner               {background:transparent url(https://s.yimg.com/lq/lib/smbiz/store/common/storedatatable/storedatatable-sprite-1.0.1.gif) no-repeat scroll -5px -5px;}
+
+.yscp_widget .yscp_round-box            {height:100px; padding:5px 0 5px 7px;}
+.yscp_widget .yscp_round-box            {background:url("https://s.yimg.com/lq/lib/smbiz/store/common/storedatatable/storedatatable-sprite-1.0.1.gif") repeat-x scroll 0 -284px #F0F0F0; border:1px solid
+ #CCCCCC; padding:9px 7px; position:relative;}
+.yscp_round-box .yscp_topblock          {height:50px; width:100%;}
+.yscp_round-box .yscp_logo              {width:150px; float:left;}
+.yscp_round-box .yscp_sign_btn          {float:right; text-align:right;}
+.yscp_round-box .yscp_welcome_blk       {padding-left:2px;}
+.yscp_round-box .yscp_welcome           {margin-bottom:10px; font-weight:bold;}
+.yscp_welcome a.userlink                {text-decoration:none;}
+
+#ys_cpPopRegisterInRegular #ys_pageBody,
+#ys_cpPopRegisterInCheckout #ys_pageBody,
+#ys_cpPopSignInRegular #ys_pageBody,
+#ys_cpPopSignInCookied #ys_pageBody     {padding:0px;}
+
+#custRegDiv a.container-close           {top:5px;}
+#iframe_id                              { width:679px; border:1px solid #000; padding:0px; }
+
+.yui-skin-sam .container-close          {background-image: url("https://s.yimg.com/lq/lib/yui/2.8.0r4/build/assets/skins/sam/sprite.png") no-repeat; }
+#yscp_glossDialog_c.yui-panel-container .container-close   {top:3px; right:4px; position:absolute; width:10px; height:10px;} 
+
+div.ys_cpInfoBox { float: left; width: 28%; }
+div.ys_cpInfoBoxWide { float: left; width: 45%; }
+div.ys_cpInfoBoxTop { text-align: center; margin: 5px; font-weight: bold; }
+div.ys_cpInfoBoxMiddle { text-align: center; margin: 5px; }
+div.ys_cpInfoBoxBottom { text-align: center; margin: 5px; }
+div.ys_cpInfoBoxORImg { float: left; padding: 0px; background: url("https://s.yimg.com/lq/lib/smbiz/store/checkout/i/cp_interim_or-1.0.0.gif") no-repeat scroll 0 0 transparent; width: 37px; height: 100px; alt: "OR"; }
+
+/* Style for cp-account */
+#ys_cpAccount #ys_buyerInfo {
+border:none;
+}
+#ys_cpAccount #ys_pageBody #ys_buyerInfo #ys_welcomeMsg {
+padding:8px 0;
+}
+#ys_cpAccount #ys_buyerInfo .page-title {
+border-bottom:1px solid grey;
+display:block;
+height:20px;
+margin-top:20px;
+width:100%;
+}
+#ys_cpAccount #ys_buyerInfo .page-title h1 {
+font-family:verdana;
+font-weight:bold;
+size:15px;
+}
+#ys_cpAccount #ys_buyerInfo .welcome {
+margin:10px 0;
+}
+#ys_cpAccount #ys_buyerInfo .yui-skin-sam .yui-navset .yui-nav .selected a, 
+#ys_cpAccount #ys_buyerInfo .yui-skin-sam .yui-navset .yui-nav .selected a:focus, 
+#ys_cpAccount #ys_buyerInfo .yui-skin-sam .yui-navset .yui-nav .selected a:hover {
+background:none repeat scroll 0 0 #3F0407;
+cursor:default;
+}
+#ys_cpAccount #ys_buyerInfo .yui-skin-sam .yui-navset .yui-nav a, 
+#ys_cpAccount #ys_buyerInfo .yui-skin-sam .yui-navset .yui-navset-top .yui-nav a {
+background:none repeat scroll 0 0 #CBCBCB;
+border:medium none;
+}
+#ys_cpAccount #ys_buyerInfo .yui-skin-sam .yui-navset .yui-nav, 
+#ys_cpAccount #ys_buyerInfo .yui-skin-sam .yui-navset .yui-navset-top .yui-nav {
+border:medium none;
+}
+#ys_cpAccount #ys_buyerInfo .yui-skin-sam .yui-navset .yui-nav li.first {
+margin-left:2px;
+}
+#ys_cpAccount #ys_buyerInfo .yui-skin-sam .yui-navset .yui-nav li.selected {
+margin-left:0;
+}
+#ys_cpAccount .yui-skin-sam .yui-navset .yui-nav li,
+#ys_cpAccount .yui-skin-sam .yui-navset .yui-navset-top .yui-nav li {
+    padding:0;
+}
+#ys_cpAccount #ys_buyerInfo .yui-skin-sam .yui-navset .yui-nav a em {
+border-color:#CBCBCB;
+color:#000;
+}
+#ys_cpAccount #ys_buyerInfo .yui-skin-sam .yui-navset .yui-nav .selected a em {
+background:#3F0407;
+border-color:#3F0407;
+color:#FFF;
+}
+#ys_cpAccount #ys_buyerInfo .yui-skin-sam .yui-navset .yui-content {
+background:none;
+}
+#ys_cpAccount #ys_buyerInfo .yui-skin-sam .yui-navset .yui-content, 
+#ys_cpAccount #ys_buyerInfo .yui-skin-sam .yui-navset .yui-navset-top .yui-content {
+border:1px solid #3F0407;
+padding:0 0 1px;
+}
+
+/* Style for cp-acc-hist */
+#ys_cpAccountOrderHist {
+    background:#FFF;
+}
+#ys_cpAccountOrderHist #ys_pageBody {
+    padding:0;
+}
+#ys_cpAccountOrderHist #yr-filter {
+    width:100%;
+    height:25px;
+    display:block;
+    margin-top:5px;
+    margin-left:11px;
+}
+#ys_cpAccountOrderHist .data-table-Title {
+    display:block;
+    background:#ECECEC;
+    padding:5px 0px;
+    padding-left:10px;
+    font-weight:bold;
+}
+
+#ys_cpAccountOrderHist a.dt-link {
+    text-decoration:underline;
+    cursor:pointer;
+}
+#ys_cpAccountOrderHist .yui-skin-sam .yui-dt-label {
+    font-size:11px;
+    margin-right:0;
+}
+#ys_cpAccountOrderHist .yui-skin-sam .yui-dt table{
+    border:none;
+    border-bottom:1px solid #CBCBCB;
+}
+#ys_cpAccountOrderHist .yui-skin-sam .yui-dt-liner {
+    text-align:center;
+    padding:4px 0;
+}
+#ys_cpAccountOrderHist .yui-skin-sam a {
+    color:#0066CC;
+}
+#ys_cpAccountOrderHist .yui-skin-sam .yui-dt-paginator {
+    text-align:center;
+    background:#F8F7F7;
+    margin:0px;
+    border-bottom:1px solid #CBCBCB;
+    padding:5px 0px;
+}
+#ys_cpAccountOrderHist .yui-skin-sam .yui-dt th {
+    background:#6495ED none;
+}
+
+#ys_cpAccountOrderHist .yui-skin-sam .yui-dt th,
+#ys_cpAccountOrderHist .yui-skin-sam .yui-dt th a {
+    color:#fff;
+}
+
+#ys_cpAccountOrderHist .yui-skin-sam tr.yui-dt-even {
+    background-color:#FFFFFF;
+}
+
+#ys_cpAccountOrderHist .yui-skin-sam tr.yui-dt-odd {
+    background-color:#F8F7F7;
+}
+
+#ys_cpAccountOrderHist .yui-skin-sam tr.yui-dt-even td.yui-dt-asc,
+#ys_cpAccountOrderHist .yui-skin-sam tr.yui-dt-even td.yui-dt-desc {
+    background-color:#FFFFFF;
+}
+
+#ys_cpAccountOrderHist .yui-skin-sam tr.yui-dt-odd td.yui-dt-asc,
+#ys_cpAccountOrderHist .yui-skin-sam tr.yui-dt-odd td.yui-dt-desc {
+    background-color:#F8F7F7;
+}
+#ys_cpAccountOrderHist #ys_mastFoot {
+    display:none;
+}
+#ys_cpAccountOrderHist .cp-reorder-link {
+    background:url("https://s.yimg.com/lq/lib/smbiz/store/checkout/i/reorder-1.0.0.png") no-repeat scroll 0 0 transparent;
+    height:20px;
+    margin-left:27%;
+    width:23px;
+    cursor:pointer;
+}
+#ys_cpAccountOrderHist .yui-skin-sam .shpstatus-col .wrapper {
+    text-align:left;
+    padding:0 4%;
+}
+#ys_cpAccountOrderHist .yui-skin-sam .shpstatus-col .shipstatus {
+    margin:0;
+    padding-left:8%;
+}
+#ys_cpAccountOrderHist .yui-skin-sam .shpstatus-col .shipstatus li {
+    padding:3px 0;
+}
+
+/* Style for Edit Profile */
+#ys_cpAccountEditProfile #ys_pageBody {
+    padding:0;
+    width:auto;
+}
+#ys_cpAccountEditProfile #ys_pageBody #ys_buyerInfo,
+#ys_cpAccountEditProfile #ys_pageBody #ys_userMessages {
+    border:0;
+}
+#ys_cpAccountEditProfile #ys_pageHeader h2 {font-size:15px; padding:8px 0 8px 16px;  font-family:Verdana,verdana,sans-serif; font-weight:bold;}
+#ys_cpAccountEditProfile #ys_pageBody #ys_buyerInfo .ys_majorSection h3,
+#ys_cpAccountEditProfile #ys_pageBody #ys_buyerInfo .ys_majorSection h4,
+#ys_cpAccountEditProfile #ys_pageBody #ys_buyerInfo .ys_majorSection fieldset {
+    padding-left:16px;
+}
+#ys_cpAccountEditProfile #ys_pageBody .ys_pageActions {
+    padding:0 20px;
+}
+
+/* IE hack to adjust margin-top */
+ul.yscp_providers.col2                  {margin-top:-10px\9;} /* IE 8 hack */
+*html  ul.yscp_providers.col2           {margin-top:-20px;} /* IE 6 hack */
+*:first-child+html  ul.yscp_providers.col2              {margin-top:-20px;} /* IE 7 hack */
+
+.yscp_page                                              {border:1px solid #fff;}
+
+/* Style for the ViewProfile Page */
+#ys_cpAccountViewProfile #ys_pageHeader {float:left; margin:8px 0 8px 16px; }
+#ys_cpAccountViewProfile #ys_pageHeader h2 {font-size:15px;  font-family:Verdana,verdana,sans-serif; font-weight:bold;}
+#ys_cpAccountViewProfile #ys_pageBody {padding:0; }
+#ys_cpAccountViewProfile #ys_pageBody #ys_buyerInfo {border:0 }
+#ys_cpAccountViewProfile .ys_pageActions {float:right; margin:10px 16px; }
+#ys_cpAccountViewProfile .ys_majorSection h3, #ys_cpAccountViewProfile .ys_majorSection h4 {padding-left:16px; }
+div#ys_cpViewProfPI       { margin-bottom:13px; }
+div#ys_cpViewProfPI h3    { margin-bottom:13px; }
+div.ys_cpViewProfileKey   { float:left; width:110px; text-align:left; font-weight:bold; margin:3px 0px 3px 26px; }
+div.ys_cpViewProfileValue { float:left; width:auto; margin-left:10px; margin:3px 3px; }
+div.ys_cpViewProfileClear { clear:both; }
+
+div#ys_cpViewProfShippingWrap    	{ margin-bottom:13px; }
+div#ys_cpViewProfShippingWrap h4 	{ margin-bottom:13px; }
+div#ys_cpViewProfShippingAddress 	{ margin-left:20px; }
+div#ys_cpViewProfShippingAddress div 	{ margin: 3px 0px; }
+
+div#ys_cpViewProfBillingWrap     	{ margin-bottom:13px; }
+div#ys_cpViewProfBillingWrap h4  	{ margin-bottom:13px; }
+div#ys_cpViewProfBillingAddress  	{ margin-left:20px; }
+div#ys_cpViewProfBillingAddress  div 	{ margin:3px 0px; }
+
+div#ys_cpViewProfOtherInformation    	{ margin-bottom:13px; }
+div#ys_cpViewProfOtherInformation h3 	{ margin-bottom:13px; }
+div#ys_cpViewProfOtherInformation div   { margin:3px 0px; }
+
+div.ys_cpViewProfileCustom              { margin-left:26px; }
+
+/* Customer Personalization - My Account - Order Status Page */
+#yscp_orderStatusHeaderLine { padding: 10px; }
+#ys_cpAccountOrderStatus #ys_pageBody { padding:4px; }
+#ys_cpAccountOrderStatus #ys_pageBody.ys_sideCart { width:740px; }
+#ys_cpAccountOrderStatus #ys_pageBody #ys_buyerInfo, #ys_cpAccountOrderStatus #ys_cart table.ys_basket { border:none; }
+
+#custRegDiv_h.hd {
+display:none;
+}
+#custRegDiv_mask.mask           { background-color:#000000; opacity:0.5; filter:alpha(opacity=50);}
+/* Customer Personalization - Registration Confirmation Page */
+#yscp_regConfirmMessage         { padding:10px; }
+#yscp_regConfirmContinueCheckout { padding:10px; }
+#yscp_regConfirmKeepShopping    { padding:10px; }
+#yscp_regConfirmMyAccount       { padding:10px; }
+div.reg-help                   {margin-top:5px; margin-left:6px;}
+#loadingDiv                     {height:210px; width:679px; position:absolute; background:#ececec;}
+img.loadingImg                  {margin-top:90px; margin-left:220px;}
+ul.regHelp                      {padding:0; margin:0 0 0 10px; list-style-position:outside; list-style-type:disc; }
+ul.regHelp li                   {padding:0; margin:0}
+/*Style for the order confirmation page, cpers registration box.*/
+#ys_confirmationPage #regBox { border:1px solid #000; padding:10px; }
+.yscpClrDiv                      {clear:both;}
+
+#ys_pageBody #ys_cart { border-left: solid 1px #ffb7cf; border-right: solid 1px #ffb7cf; border-bottom: solid 1px #ffb7cf; }
+.ys_updateQty .ysco_last {border-right: none;}
+#ys_cart table.ys_basket        {border: none;}
+
+
+#ys_merchLogo {
+	display:none;
+}

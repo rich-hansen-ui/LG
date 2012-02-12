@@ -1,0 +1,672 @@
+/* CSS Document */
+
+/*PAGE LAYOUT*/
+
+
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, font, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td {
+        margin: 0;
+        padding: 0;
+        border: 0;
+        outline: 0;
+        font-weight: inherit;
+        font-style: inherit;
+        font-size: 100%;
+        font-family: inherit;
+        vertical-align: baseline;
+}
+/* remember to define focus styles! */
+:focus {
+        outline: 0;
+}
+body{background-image:url(images/background_base.jpg);} 
+
+
+
+
+
+ol, ul {
+        list-style: none;
+}
+/* tables still need 'cellspacing="0"' in the markup */
+table {
+        border-collapse: separate;
+        border-spacing: 0;
+}
+caption, th, td {
+        text-align: left;
+        font-weight: normal;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+        content: "";
+}
+blockquote, q {
+        quotes: "" "";
+}
+
+
+
+
+
+
+/**** CONTAINER *******************************/
+
+#container_b{
+width:100%;
+height:900px;
+text-align: center; 
+margin:0 auto; 
+padding:0px;}
+
+
+
+#container{
+width:502px;
+height:auto;
+padding:0 180px 0 180px; 
+text-align: center; 
+margin:0 auto;}
+
+
+.box_logo{
+position:absolute; 
+z-index:4; 
+width:381px; 
+height:247px; 
+padding:0px; 
+margin:0px 0 0 -180px; 
+text-align:left;}
+
+
+.box_about{
+position:absolute; 
+z-index:1; 
+width:176px; 
+height:108px; 
+padding:75px 0 0 75px; 
+margin:510px 0 0 -160px; 
+background-image:url(images/about.png);
+text-align:left;}
+
+
+a.b_menu{
+width:auto; 
+height:autox; 
+padding:0px; 
+font-family:"Times New Roman", Times, serif; font-size:21px; color:#FFFFFF; text-decoration:none; 
+text-align:left;}
+
+a.b_menu:hover{
+color: #FF9900;}
+
+
+
+.box_main{
+position:absolute;
+z-index:3;  
+width:337px; 
+height:470px; 
+padding:130px 90px 0 75px; 
+margin:117px 0 0 0; 
+text-align:left; 
+background-image:url(images/background_main_mod1.png)}
+
+
+
+.box_main1{
+width:337px; 
+height:auto; 
+padding:0 0 20px 0; 
+margin:0px; 
+font-family:"Times New Roman", Times, serif; font-size:20px; color:#000000; 
+text-align:left;
+float:left;}
+
+
+.box_main2{
+width:337px; 
+height:auto; 
+padding:0 0 20px 0; 
+margin:0px; 
+font-family:"Times New Roman", Times, serif; font-size:14px; color:#d91b5c; 
+text-align:left; 
+float:left;}
+
+
+
+
+
+.box_press{
+position:absolute; 
+z-index:5; 
+width:154px; 
+height:118px; 
+padding:85px 0 0 76px; 
+margin:280px 0 0 -176px; 
+background-image:url(images/press.png);
+text-align:left;}
+
+
+.box_shop{
+position:absolute; 
+z-index:6; 
+width:121px; 
+height:178px; 
+padding:140px 0 0 60px; 
+margin:130px 0 0 465px; 
+background-image:url(images/shop.png);
+text-align:left;}
+
+
+.box_ecofashion{
+position:absolute; 
+z-index:7; 
+width:183px; 
+height:107px; 
+padding:80px 0 0 52px; 
+margin:430px 0 0 430px; 
+background-image:url(images/ecofashion.png);
+text-align:left;}
+
+
+.box_lb{
+position:absolute; 
+z-index:2; 
+width:471px; 
+height:306px; 
+padding:0px; 
+margin:520px 0 0 230px;  
+background-image:url(images/lb.png);
+text-align:left;}
+
+
+
+.box_copy{
+position:absolute; 
+z-index:9; 
+width:390px; 
+height:auto; 
+padding:0px; 
+margin:715px 0 0 -10px;  
+font-family:"Times New Roman", Times, serif; font-size:14px; color: #FFFFFF; font-weight:normal; 
+text-align:left;}
+
+
+.box_follow{
+position:absolute; 
+z-index:10; 
+width:65px; 
+height:auto; 
+padding:0px; 
+margin:715px 0 0 400px;  
+font-family: "Times New Roman", Times, serif; font-size:14px; color: #FFFFFF; font-weight:normal; 
+text-align:left;}
+
+
+.box_red{
+position:absolute; 
+z-index:10; 
+width:auto; 
+height:auto; 
+padding:0px; 
+margin:710px 0 0 470px;  
+text-align:left;}
+
+
+
+/**** INNER *******************************/
+
+
+
+#inner{
+width:1100px;
+height:auto;
+padding:0px; 
+text-align: center; 
+margin:0 auto;}
+
+.inn_logo{
+position:absolute; 
+z-index:4; 
+width:381px; 
+height:247px; 
+padding:0px; 
+margin:-30px 0 0 -40px; 
+text-align:left;}
+
+
+.shopping_bag{
+position:absolute;
+z-index:5;  
+width:160px; 
+height:50px; 
+padding:10px 0 0 0; 
+background-image:url(images/shopping_bag.png);
+margin:0 0 0 818px;
+font-family: Helvetica, Times, serif; font-size:14px; color: #FFFFFF; font-weight:normal; 
+text-align:left; }
+
+#yfc_mini {
+	position:absolute;
+	margin:0 0 0 60%;
+	background:url(images/shopping_bag.png) no-repeat center;
+	height:50px;
+}
+
+.menu{
+position:absolute;
+z-index:4;  
+width:604px; 
+height:60px; 
+padding:0px; 
+margin:60px 0 0 374px; 
+text-align:left; }
+
+
+
+.nav { list-style: none;}
+.nav li { float: left;}
+.nav li a { width:auto; height:auto; display: block; padding:0 18px 0 18px; font-family:"Times New Roman", Times, serif; font-size:29px; color:#FFFFFF; text-decoration:none; float:left}
+
+.nav li .nav { width:auto;}
+
+.nav li .nav:hover { width:auto; color:#f19faf}
+
+.nav li .nav_over { width:auto; color:#f19faf}
+
+
+
+.inn_main{
+position:absolute;
+z-index:3;  
+width:874px; 
+height:610px; 
+padding:80px 122px 0 104px; 
+margin:120px 0 0 0; 
+text-align:left; 
+background-image:url(images/background_i_main2.png)}
+
+#ys_merchLogo {
+	display:none;
+}
+
+
+.inn_main1{
+width:874px; 
+height:63px; 
+padding:0px; 
+margin:0px; 
+font-family:"Times New Roman", Times, serif; font-size:48px; color:#d91b5c; 
+text-align:center;
+float:left;}
+
+.inn_main1 img {
+	position:absolute;
+	top:50px;
+	left:740px;
+	width:270px;
+	height:55px;
+}
+
+
+.inn_main2{
+width:169px; 
+height:auto; 
+padding:12px 3px 0 0; 
+margin:0px; 
+text-align:center;
+float:left;}
+
+
+
+.navl { list-style: none;}
+.navl li { float: left;}
+.navl li a { width:157px; height:auto; display: block; padding:8px 0px; font-family:Helvetica, Arial, Times, serif; font-size:12px; color:#d91b5c; text-decoration:none; text-align:left; float:left}
+
+.navl li .nav { background-color:#FFFFFF}
+.navl li .nav1 { width:157px; height:6px; margin-left:-6px; display: block; color:#d91b5c; text-decoration:none; text-align:left; float:left}
+
+.navl li .nav:hover { background-color:#ff4987; color:#FFFFFF;}
+
+.navl li .nav_over { background-color:#ff4987; color:#FFFFFF;}
+
+
+.inn_main3 h3 {
+font-family:Helvetica, Times, serif; font-size:18px; color:#d91b5c;
+font-weight: bold;
+text-align:left;
+padding: 10px 18px 20px 50px;
+}
+
+.inn_main3 h4 {
+font-family:Helvetica, Times, serif; font-size:14px; color:#000000;
+font-weight: bold;
+text-align:left;
+padding: 5px 18px 0px 50px;}
+
+.inn_main3 h5 {
+font-family:Helvetica, Times, serif; font-size:12px; color:#d91b5c;
+font-weight: bold;
+text-align:left;
+padding: 10px 18px 0px 50px;
+}
+
+.inn_main3 p {
+font-family:Helvetica, Times, serif; font-size:12px; color:#000000;
+width: 650px;
+text-align:left;
+padding: 0px 18px 15px 50px;}
+
+.inn_main3 table {
+font-family:Helvetica, Times, serif; font-size:12px; color:#000000;
+width:600px;
+margin-left:auto; 
+margin-right:auto;
+margin-bottom:20px;
+border:1px solid;
+padding:2px;
+}
+
+.inn_main3 table tr td {
+text-align:center;	
+}
+
+.inn_main3{
+width:702px; 
+height:480px; 
+padding:0px; 
+margin:0px; 
+text-align:center;
+float:left;
+overflow:auto;
+}
+
+.inn_main3>ul {
+	list-style:disc;
+	text-align:left;
+	font-family:Helvetica, Times, serif; font-size:12px; color:#000000;
+	margin:0 0 20px 400px;
+}
+
+.inn_main4{
+width:190px; 
+padding:18px 18px 0 18px; 
+margin:0px; 
+text-align:center;
+float:left;}
+
+
+.inn_main5{
+width:198px; 
+height:110px; 
+padding:0px; 
+margin:0px; 
+text-align:center;
+float:left;}
+
+.inn_main6{
+width:198px; 
+height:auto; 
+padding:0 0 3px 0; 
+margin:0px; 
+font-family:Helvetica, Times, serif; font-size:14px; color:#000000; 
+text-align:center;
+float:left;}
+
+.inn_main7{
+width:198px; 
+height:auto; 
+padding:0px; 
+margin:0px; 
+font-family: Arial, Helvetica, sans-serif; font-size:18px; color:#af1348; 
+text-align:center;
+float:left;}
+
+
+.inn_main8{
+width:198px; 
+height:auto; 
+padding:12px 0 0 0; 
+margin:0px;
+border-top: 2px Solid #FFFFFF;   
+text-align:center;
+float:left;}
+
+
+.inn_main9{
+width:40px; 
+height:auto; 
+padding:2px 0 0 0; 
+font-family: Arial, Helvetica, sans-serif; font-size:12px; color:#af1348;
+text-align:left;
+float:left;}
+
+
+.inn_main10{
+width:140px; 
+height:auto; 
+padding:2px 0px 0px 0px;
+font-family: Arial, Helvetica, sans-serif; font-size:12px; color:#af1348;
+text-align:left;
+display:inline;
+float:left;}
+
+
+.inn_main11{
+width:58px; 
+height:auto; 
+padding:0px; 
+text-align:left;
+float:left;}
+
+.inn_main12{
+width:88px; 
+height:20px; 
+padding:0px;
+border: 1px Solid #999999; 
+font-family:Arial, Helvetica, sans-serif; font-size:11px; font-weight:bold; color:#2d2d2d;    
+text-align:left;
+float:left;}
+
+.shopbuttons{
+width:auto;
+height:auto;
+padding: 0px;
+margin-left:330px;
+}
+
+.product_page_spacing1{
+margin-top: 20px;}
+
+.product_page_spacing2{
+margin-top: 0px;}
+
+#productLarge {
+	float:left;
+	padding:0px 35px 0px 55px;
+	width:350px;
+	height:233px;
+}
+
+#thumbOne,#thumbTwo,#thumbThree {
+	cursor:pointer;
+}
+
+input.b_buy{
+width:43px;
+height:21px;
+padding:0px;
+background-image:url(images/buy2.png);
+border: 0 none;
+cursor: pointer;
+}
+
+input.b_buy:hover{
+background-image:url(images/buy2.png); }
+
+.inn_main13{
+width:400px; 
+height:auto; 
+padding:10px 0 0 190px; 
+margin:0px; 
+text-align:center;
+float:left;}
+
+
+
+.navp { list-style: none;}
+.navp li { float: left;}
+.navp li a { width:auto; height:auto; display: block; padding:0 10px 0 10px; font-family: Arial, "Times New Roman", sans-serif; font-size:11px; color:#db3367; float:left}
+
+.navp li .nav { width:auto; text-decoration:none;}
+.navp li .nav1 { width:auto; font-family: Arial, "Times New Roman", sans-serif; font-size:11px; color:#9f9f9f; padding:0px; text-decoration:none;}
+
+.navp li .nav:hover { width:auto; color:#db3367}
+
+.navp li .nav_over { width:auto; color:#db3367}
+
+
+.inn_lb{
+position:absolute; 
+z-index:2; 
+width:220px; 
+height:131px; 
+padding:0px; 
+margin:740px 0 0 824px;  
+background-image:url(images/lb2.png);
+text-align:left;}
+
+.inn_copy{
+position:absolute; 
+z-index:9; 
+width:390px; 
+height:auto; 
+padding:0px; 
+margin:810px 0 0 70px;  
+font-family: Helvetica, Times, serif; font-size:12px; color: #FFFFFF; font-weight:normal; 
+text-align:left;}
+
+
+.inn_follow{
+position:absolute; 
+z-index:10; 
+width:65px; 
+height:auto; 
+padding:0px; 
+margin:810px 0 0 877px;  
+font-family: Helvetica, Times, serif; font-size:12px; color: #FFFFFF; font-weight:normal; 
+text-align:left;}
+
+
+.inn_red{
+position:absolute; 
+z-index:10; 
+width:auto; 
+height:auto; 
+padding:0px; 
+margin:805px 0 0 940px;  
+text-align:left;}
+
+.menu_bott{
+position:absolute; 
+z-index:11; 
+width:auto; 
+height:auto; 
+padding:0px; 
+margin:810px 0 0 520px;  
+text-align:left;}
+
+a.bmenu_bott{
+width:auto; 
+height:auto; 
+padding:0 25px 0 0; 
+font-family: Helvetica, Times, serif; font-size:12px; color: #FFFFFF; font-weight:normal; 
+text-align:left; text-decoration:none; 
+float:left}
+
+a.bmenu_bott:hover{
+color:#000000;}
+
+.contactForm {
+	font-family:Helvetica, Times, serif; font-size:12px; color:#000000;
+	margin-left:55px;
+}
+
+.contactForm label {
+	display:block;
+	text-align:left;
+}
+
+.contactForm input {
+	display:block;
+	margin-bottom:10px;
+}
+
+.contactForm label[for="Mailinglist"] {
+	display:block;
+	float:left;
+	clear:none;
+}
+
+.contactForm input[type="checkbox"] {
+	display:inline;
+	float:left;
+	clear:none;
+}
+
+.contactForm input[type="submit"] {
+	margin:15px 0px 0px 0px;
+}
+
+.contactForm textarea {
+	display:block;
+	margin-bottom:10px;
+}
+
+#productOverlay {
+    background-color: #FFFFFF;
+    border: 1px solid #000000;
+    -moz-border-radius: 10px;
+    -khtml-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+}
+
+#productOverlay .inn_main3 {
+    width: 720px;
+}
+
+#hideOverlay {
+    position:absolute;
+	top:10px;
+	left:720px;
+	width:100px;
+	height:55px;
+    font-family:Helvetica, Times, serif;
+    font-size:12px;
+}
+
+.inn_main5 {
+    cursor: pointer;
+}
+
+.fadeToBlack {
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    width: 100%;
+    height: 900px;
+    z-index: 9;
+    background-color: black;
+    -moz-opacity: 0.6;
+    opacity: .60;
+    filter: alpha(opacity=60);
+}
